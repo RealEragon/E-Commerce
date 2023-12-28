@@ -1,0 +1,72 @@
+<style>
+    body {
+        background-color: #1d1d1d;
+        font-family: 'Arial', sans-serif;
+        color: #ffffff;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .card {
+        background-color: #2a2a2a;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #ffffff;
+    }
+
+    .profile-info {
+        margin-bottom: 20px;
+    }
+
+    .profile-info p {
+        margin: 0;
+    }
+
+    .profile-info strong {
+        color: #4CAF50;
+    }
+
+    .profile-actions {
+        margin-top: 20px;
+    }
+
+    .btn-primary {
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <h2>Your Profile</h2>
+
+        <div class="profile-info">
+          <p><strong>First Name:</strong> <%= @user.first_name %></p>
+          <p><strong>Last Name:</strong> <%= @user.last_name %></p>
+          <p><strong>Email:</strong> <%= @user.email %></p>
+        </div>
+
+        <div class="profile-actions">
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
