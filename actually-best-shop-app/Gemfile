@@ -12,6 +12,8 @@ gem "puma", ">= 5.0"
 
 gem "pundit"
 
+gem "email_validator"
+
 gem "importmap-rails"
 
 gem "turbo-rails"
