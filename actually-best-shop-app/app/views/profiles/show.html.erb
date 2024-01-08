@@ -65,6 +65,7 @@
 
         <div class="profile-actions">
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
         </div>
       </div>
     </div>

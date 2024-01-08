@@ -1,11 +1,12 @@
-require 'email_validator'
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :confirmable, :lockable, :timeoutable, :trackable, and :omniauthable
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :email, email: { mode: :strict }
+  validates :first_name, presence: true, length: { maximum: 100 }
+  validates :last_name, presence: true, length: { maximum: 100 }
+  validates :email, email: { mode: :strict }, presence: true, length: { maximum: 150 }
 end
