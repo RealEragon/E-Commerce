@@ -1,6 +1,8 @@
 source "http://rubygems.org"
 
-ruby "3.1.3"
+ruby "3.2.2"
+
+gem "email_validator"
 
 gem "rails", "~> 7.1.2"
 
